@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import SpringAnimation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var springAnimationView: SpringView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func runSpringButton(_ sender: SpringButton) {
+        springAnimationView.animation = "shake"
+        springAnimationView.animate()
     }
-
-
+    
+    
 }
 
