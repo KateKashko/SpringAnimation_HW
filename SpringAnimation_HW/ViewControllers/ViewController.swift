@@ -51,7 +51,7 @@ final class ViewController: UIViewController {
         randomAnimation()
         
         animation = Animation.getAnimation()
-        sender.setTitle(animation.preset, for: .normal)
+        sender.setTitle("Run \(animation.preset)", for: .normal)
     }
    
 }
