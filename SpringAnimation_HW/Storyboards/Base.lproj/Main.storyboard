@@ -99,6 +99,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="curveLabel" destination="O4X-aE-0Eq" id="SSS-a4-zI7"/>
+                        <outlet property="delayLabel" destination="C0B-R8-dW3" id="h8D-VB-7bJ"/>
+                        <outlet property="durationLabel" destination="3Bg-UM-BFR" id="Ed3-md-3zb"/>
+                        <outlet property="forceLabel" destination="jZ5-kH-SbB" id="LIF-RJ-ceR"/>
+                        <outlet property="presetLabel" destination="B9R-8K-25c" id="zjo-NH-PTL"/>
                         <outlet property="springAnimationView" destination="GVn-yn-XYc" id="dvN-fX-AQO"/>
                     </connections>
                 </viewController>
