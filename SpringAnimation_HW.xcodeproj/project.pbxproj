@@ -14,8 +14,8 @@
 		93A0BF092A00D8D900FA2D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A0BF082A00D8D900FA2D5B /* Assets.xcassets */; };
 		93A0BF0C2A00D8D900FA2D5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A0BF0A2A00D8D900FA2D5B /* LaunchScreen.storyboard */; };
 		93A0BF152A00D99100FA2D5B /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 93A0BF142A00D99100FA2D5B /* SpringAnimation */; };
-		93A0BF1B2A01453B00FA2D5B /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A0BF1A2A01453B00FA2D5B /* SpringAnimation.swift */; };
-		93A0BF1F2A01458600FA2D5B /* SpringAnimationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A0BF1E2A01458600FA2D5B /* SpringAnimationData.swift */; };
+		93A0BF1B2A01453B00FA2D5B /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A0BF1A2A01453B00FA2D5B /* Animation.swift */; };
+		93A0BF1F2A01458600FA2D5B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A0BF1E2A01458600FA2D5B /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		93A0BF082A00D8D900FA2D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93A0BF0B2A00D8D900FA2D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A0BF0D2A00D8D900FA2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A0BF1A2A01453B00FA2D5B /* SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
-		93A0BF1E2A01458600FA2D5B /* SpringAnimationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationData.swift; sourceTree = "<group>"; };
+		93A0BF1A2A01453B00FA2D5B /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		93A0BF1E2A01458600FA2D5B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +64,10 @@
 			children = (
 				93A0BF182A0144EB00FA2D5B /* Apps */,
 				93A0BF212A0145A600FA2D5B /* ViewControllers */,
-				93A0BF1D2A01456C00FA2D5B /* DataStore */,
+				93A0BF1D2A01456C00FA2D5B /* Services */,
 				93A0BF1C2A01454300FA2D5B /* Models */,
 				93A0BF192A01450E00FA2D5B /* Storyboards */,
-				93A0BF082A00D8D900FA2D5B /* Assets.xcassets */,
+				93A0BF9F2A08352800FA2D5B /* Resources */,
 			);
 			path = SpringAnimation_HW;
 			sourceTree = "<group>";
@@ -94,17 +94,17 @@
 		93A0BF1C2A01454300FA2D5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				93A0BF1A2A01453B00FA2D5B /* SpringAnimation.swift */,
+				93A0BF1A2A01453B00FA2D5B /* Animation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		93A0BF1D2A01456C00FA2D5B /* DataStore */ = {
+		93A0BF1D2A01456C00FA2D5B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				93A0BF1E2A01458600FA2D5B /* SpringAnimationData.swift */,
+				93A0BF1E2A01458600FA2D5B /* DataStore.swift */,
 			);
-			path = DataStore;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		93A0BF212A0145A600FA2D5B /* ViewControllers */ = {
@@ -113,6 +113,14 @@
 				93A0BF032A00D8D700FA2D5B /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		93A0BF9F2A08352800FA2D5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93A0BF082A00D8D900FA2D5B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A0BF1F2A01458600FA2D5B /* SpringAnimationData.swift in Sources */,
+				93A0BF1F2A01458600FA2D5B /* DataStore.swift in Sources */,
 				93A0BF042A00D8D700FA2D5B /* ViewController.swift in Sources */,
-				93A0BF1B2A01453B00FA2D5B /* SpringAnimation.swift in Sources */,
+				93A0BF1B2A01453B00FA2D5B /* Animation.swift in Sources */,
 				93A0BF002A00D8D700FA2D5B /* AppDelegate.swift in Sources */,
 				93A0BF022A00D8D700FA2D5B /* SceneDelegate.swift in Sources */,
 			);

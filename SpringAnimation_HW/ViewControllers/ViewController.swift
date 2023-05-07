@@ -10,47 +10,29 @@ import SpringAnimation
 
 final class ViewController: UIViewController {
     
-    @IBOutlet var springAnimationView: SpringView!
+    // MARK: - IB Outlets
+    @IBOutlet var animationView: SpringView!
+    @IBOutlet var animationLabel: SpringLabel! {
+        didSet {
+            animationLabel.text = animation.description
+        }
+    }
 
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    // MARK: - Private properties
+    private var animation = Animation.randomAnimation
     
-    var animation = Animation.getAnimation()
-    
-    override func viewDidLoad() {
-        presetLabel.text = "Preset: \(animation.preset)"
-        curveLabel.text = "Curve: \(animation.curve)"
-        forceLabel.text = "Force: \(String(format: "%.1f", animation.force))"
-        durationLabel.text = "Duration: \(String(format: "%.1f", animation.duration))"
-        delayLabel.text = "Delay: \(String(format: "%.1f", animation.delay))"
-    }
-    
-    func randomAnimation() {
-        springAnimationView.animation = animation.preset
-        presetLabel.text = "Preset: \(animation.preset)"
+    // MARK: IB Actions
+    @IBAction func animationButtonPressed(_ sender: SpringButton) {
+        animationLabel.text = animation.description
         
-        springAnimationView.curve = animation.curve
-        curveLabel.text = "Curve: \(animation.curve)"
-        
-        springAnimationView.force = animation.force
-        forceLabel.text = "Force: \(String(format: "%.1f", animation.force))"
-        
-        springAnimationView.duration = animation.duration
-        durationLabel.text = "Duration: \(String(format: "%.1f", animation.duration))"
-        
-        springAnimationView.delay = animation.delay
-        delayLabel.text = "Delay: \(String(format: "%.1f", animation.delay))"
-        
-        springAnimationView.animate()
-    }
-    
-    @IBAction func runSpringButton(_ sender: SpringButton) {
-        randomAnimation()
-        
-        animation = Animation.getAnimation()
+        animationView.animation = animation.preset
+        animationView.curve = animation.curve
+        animationView.duration = animation.duration
+        animationView.force = animation.force
+        animationView.delay = animation.delay
+        animationView.animate()
+
+        animation = Animation.randomAnimation
         sender.setTitle("Run \(animation.preset)", for: .normal)
     }
    

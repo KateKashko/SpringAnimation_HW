@@ -22,32 +22,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-C8-8Jo">
                                         <rect key="frame" x="20" y="10" width="213" height="120"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Preset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-8K-25c">
-                                                <rect key="frame" x="0.0" y="0.0" width="213" height="22.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curve:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4X-aE-0Eq">
-                                                <rect key="frame" x="0.0" y="26.666666666666657" width="213" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ5-kH-SbB">
-                                                <rect key="frame" x="0.0" y="51" width="213" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bg-UM-BFR">
-                                                <rect key="frame" x="0.0" y="75.333333333333343" width="213" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0B-R8-dW3">
-                                                <rect key="frame" x="0.0" y="99.666666666666657" width="213" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Animation parameters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-8K-25c">
+                                                <rect key="frame" x="0.0" y="0.0" width="213" height="120"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -83,7 +59,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="runSpringButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZeF-y9-0ZZ"/>
+                                    <action selector="animationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZeF-y9-0ZZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,12 +75,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="curveLabel" destination="O4X-aE-0Eq" id="SSS-a4-zI7"/>
-                        <outlet property="delayLabel" destination="C0B-R8-dW3" id="h8D-VB-7bJ"/>
-                        <outlet property="durationLabel" destination="3Bg-UM-BFR" id="Ed3-md-3zb"/>
-                        <outlet property="forceLabel" destination="jZ5-kH-SbB" id="LIF-RJ-ceR"/>
-                        <outlet property="presetLabel" destination="B9R-8K-25c" id="zjo-NH-PTL"/>
-                        <outlet property="springAnimationView" destination="GVn-yn-XYc" id="dvN-fX-AQO"/>
+                        <outlet property="animationLabel" destination="B9R-8K-25c" id="zjo-NH-PTL"/>
+                        <outlet property="animationView" destination="GVn-yn-XYc" id="dvN-fX-AQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
